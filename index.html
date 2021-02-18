@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text' media='screen' href='#'>
+    
+</head>
+<body>
+    <h2>JavaScript Assignment</h2>
+    <p id=suma></p>
+    <p id="resta"></p>
+    <p id="por"></p>
+    <p id="div"></p>
+    <hr>
+
+    <h2>JavaScript Functions</h2>
+    <input id="pesos" placeholder=""><p id="dollar"> = </p>
+    <hr>
+
+    <h2>JavaScript Objects</h2>
+    <p id="objetos"></p>
+    <hr>
+
+    <h2>JavaScript Arrays</h2>
+    <p id="puntos0"></p>
+    <p id="puntos1"></p>
+    <p id="puntos2"></p>
+    <p id="puntos3"></p>
+    
+    <hr>
+
+    <h2>JavaScript Array Methods</h2>
+    <p id="planetas"></p>
+    <p id="nuevoplaneta"></p>
+    <p id=""></p>
+    <hr>
+
+
+    <script>
+
+        // asignacion
+var x = 50
+    y = 30
+    z = 25
+    r = 100
+
+x += 30
+y -= 10
+z *= 2
+r /= 20
+
+document.getElementById("suma").innerHTML = "50 + 30 = " + x
+document.getElementById("resta").innerHTML = "30 - 10 = " + y
+document.getElementById("por").innerHTML = "25 * 2 = " + z
+document.getElementById("div").innerHTML = "100 / 20 = " + r
+
+        // funciones
+
+
+        // objetos
+var personas = {
+    nombre: "Pedro",
+    apellido: "Perez",
+    edad: "28",
+    sexo: "masculino",
+    nombreCompleto: function() {
+        return this.nombre + " " + this.apellido;
+    }
+}
+document.getElementById("objetos").innerHTML = personas.nombreCompleto() + " tiene " + personas.edad + " años";
+
+        // arreglos
+var estudiantes = ["Maria","Diego","Dario","Juliana"];
+var puntajes = [50,48,38,40];
+
+for (let index = 0; index < estudiantes.length; index++) {
+
+    document.getElementById("puntos" + index).innerHTML = "la calificación de " + estudiantes[index] + " es: " + puntajes[index] + "<br>";
+}
+
+        // Metodos arreglos
+var planetas = ["venus", "mercurio", "marte", "jupiter"];
+document.getElementById("planetas").innerHTML = planetas.pop();
+document.getElementById("nuevoplaneta").innerHTML = planetas;
+planetas.push("urano");
+
+
+    </script>
+</body>
+</html>
