@@ -33,9 +33,14 @@
     <hr>
 
     <h2>JavaScript Array Methods</h2>
-    <p id="planetas"></p>
-    <p id="nuevoplaneta"></p>
-    <p id=""></p>
+    <button onclick="pop()">POP</button>
+    <p id="planetapop"></p>
+    <button onclick="push()">PUSH</button>
+    <p id="planetapush"></p>
+    <button onclick="shift()">SHIFT</button>
+    <p id="planetashift"></p>
+    <button onclick="unshift()">UNSHIFT</button>
+    <p id="planetaunsh"></p>
     <hr>
 
 
@@ -83,10 +88,36 @@ for (let index = 0; index < estudiantes.length; index++) {
 
         // Metodos arreglos
 var planetas = ["venus", "mercurio", "marte", "jupiter"];
-document.getElementById("planetas").innerHTML = planetas.pop();
-document.getElementById("nuevoplaneta").innerHTML = planetas;
-planetas.push("urano");
+    document.getElementById("planetapop").innerHTML = planetas;
 
+    function pop() {
+        planetas.pop();
+        document.getElementById("planetapop").innerHTML = planetas;
+    }
+
+var planetas = ["venus", "mercurio", "marte", "jupiter"];
+    document.getElementById("planetapush").innerHTML = planetas;
+
+    function push() {
+        planetas.push("pluton");
+        document.getElementById("planetapush").innerHTML = planetas;
+    }
+     
+var planetas = ["venus", "mercurio", "marte", "jupiter"];
+    document.getElementById("planetashift").innerHTML = planetas;
+
+    function shift() {
+        planetas.shift();
+        document.getElementById("planetashift").innerHTML = planetas;
+    }
+
+var planetas = ["venus", "mercurio", "marte", "jupiter"];
+    document.getElementById("planetaunsh").innerHTML = planetas;
+
+    function unshift() {
+        planetas.unshift("pluton");
+        document.getElementById("planetaunsh").innerHTML = planetas;
+    }
 
     </script>
 </body>
